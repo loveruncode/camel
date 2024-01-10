@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 250vh;
+        }
+
+        .container {
+            max-width: 300px;
+            width: 100%;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+
+        input {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 16px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        button {
+            background-color: #4caf50;
+            color: #fff;
+            padding: 10px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        #show{
+            padding: 20px;
+            border: 1.6px black solid;
+        }
+    </style>
+    <title>Báo Cáo Lạc Đà</title>
+</head>
+<body>
+     <div class="container">
+        <hr>
+        <label>Tên BA : </label>
+        <input onchange="tinhtong()" type="text" id="name" placeholder="Nhập Tên BA">
+        <label>Ngày : </label>
+        <input onchange="tinhtong()" type="date" id="date" >
+        <!-- <label>Số Người Hút(Smoker):</label>
+        <input onchange="tinhtong()" type="number" id="smoker"  placeholder="Nhập Số người hút">
+        <label >Số Người Tiếp Cận :</label>
+        <input onchange="tinhtong()" type="number" id="nguoitiepcan"  placeholder="Nhập Số người Tiếp Cận"> -->
+        <label>Số Trial:</label>
+        <input onchange="tinhtong()" type="number" id="trial"  placeholder="Nhập Số Trial">
+        <label>Thuốc Trà Đen:</label>
+        <input onchange="tinhtong()" type="number" id="traden"  placeholder="Nhập Số Thuốc Trà Đen">
+        <label>Thuốc Compact:</label>
+        <input onchange="tinhtong()" type="number" id="compact"  placeholder="Nhập Số Thuốc Compact">
+        <label>Thuốc Melon:</label>
+        <input onchange="tinhtong()" type="number" id="melon"  placeholder="Nhập Số Thuốc Melon">
+        <label>Thuốc Dưa Lưới:</label>
+        <input onchange="tinhtong()" type="number" id="dualuoi"  placeholder="Nhập Số Thuốc Dưa Lưới">
+        <hr>
+   
+        <div class="gift">
+            <label>Quà local(1g):</label>  
+            <input onchange="tinhtong()" type="number" id="local1"  placeholder="Nhập Số Local">
+        </div>
+        <div class="gift">
+            <label>Quà local(2g):</label>  
+            <input onchange="tinhtong()" type="number" id="local2"  placeholder="Nhập Số Local">
+        </div>
+        <div class="gift">
+            <label>ADM(3g):</label>  
+            <input onchange="tinhtong()" type="number" id="adm"  placeholder="Nhập Số ADM">
+        </div>
+        <div class="gift">
+            <label>Quẹt Kim Loại (1g):</label>  
+            <input onchange="tinhtong()" type="number" id="qkl1"  placeholder="Nhập Số Quẹt Kim Loại">
+        </div>
+        <div class="gift">
+            <label>Quẹt Kiem Loại(2g):</label>  
+            <input onchange="tinhtong()" type="number" id="qkl2"  placeholder="Nhập Số Quẹt Kim Loại">
+        </div>
+        <div class="gift">
+            <label>Gạc Tàn(5g):</label>  
+            <input onchange="tinhtong()" type="number" id="gactan"  placeholder="Nhập Số Gạc Tàn Nếu có">
+        </div>
+       
+        <div class="gift">
+            <label> Loa(5g):</label>  
+            <input onchange="tinhtong()" type="number" id="loa"  placeholder="Nhập Số Loa nếu có">
+        </div>
+        <div class="gift">
+            <label> Lixi:</label>  
+            <input onchange="tinhtong()" type="number" id="lixi"  placeholder="Nhập Số lì xì">
+        </div>
+
+
+        <hr>
+        <div class="trialsanpham">
+            <label>Trial CP:</label>  
+            <input onchange="tinhtong()" type="number" id="trialcp"  placeholder="Nhập Số Trial CP">
+        </div>
+        <div class="trialsanpham">
+            <label>Trial Melon:</label>  
+            <input onchange="tinhtong()" type="number" id="trialmelon"  placeholder="Nhập Số Trial Melon">
+        </div>
+        <div class="trialsanpham">
+            <label>Trial TD:</label>  
+            <input onchange="tinhtong()" type="number" id="trialtd"  placeholder="Nhập Số Trial Trà Đen">
+        </div>
+
+
+        <button type="submit" onclick="tinhtong()" id="btn">Xuất Báo Cáo Viber</button>
+        <div id="show">
+
+           
+        </div>
+
+         </div>
+      
+    <script src="/main.js"></script>
+</body>
+</html>
